@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# 자신감 저장소(Courage Storage) 프로젝트
+- 칭찬이나 자신감을 북돋아주는 말을 들었을 때 저장해놓는 사이트
+  
+# 설계
+## 사용
+| 구분 | 사용 |
+|:---:|:---:|
+|Lang|Typescript|
+|Library|React, Redux|
+|CSS Framework|Tailwind|
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로토타입 및 기능
+### Welcome 페이지
+![Welcome](./public/Prototype/Welcome.JPG)
+- 사용자 이름 입력받기
+- '입장하기' 클릭 시, 홈페이지로 이동
 
-## Available Scripts
+### Homepage
+![Homepage](./public/Prototype/Homepage.JPG)
+- 헤더 : 웰컴페이지에서 입력받은 사용자 이름 출력
+- '+' 버튼 누르면 모달창 생성
+- 이미 생성된 아이템 클릭 시 내용 확인 가능
+- 아이템 호버링 시 확대 모션
+- 생성되는 아이템의 색은 무작위로 선정
+- 아이템 생성된 순서대로 id 넘버링
+- 아이템 생성시, 앞에서부터 추가
+- 화면 사이즈에 따라 아이템 위치 변화
 
-In the project directory, you can run:
+### View-Item
+![View-Item](./public/Prototype/View-Item.JPG)
+- 새로운 모달창으로 내용 확인
+- '수정하기' 클릭시, 내용 수정 가능
+- '삭제하기' 클릭시, 알림창으로 삭제의사 확인 후 삭제
+- 우측 상단의 'X'버튼 누르면 창 닫기
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Add-Item
+![Add-Item](./public/Prototype/Add-Item.JPG)
+- 새로운 모달창으로 내용 추가
+- 헤더의 N은 마지막 아이템 id+1
+- placeholder로 예시 문구 지정
+- '저장하기' 클릭시, 입력 내용 저장 및 홈페이지에 새로운 아이템 추가
