@@ -12,8 +12,9 @@
 ## 프로토타입 및 기능
 ### Welcome 페이지
 ![Welcome](./public/Prototype/Welcome.JPG)
-- 사용자 이름 입력받기
+- 사용자 이름 입력받기(고유id X)
 - '입장하기' 클릭 시, 홈페이지로 이동
+- 이름은 props로 Homepage 컴포넌트로 전달
 
 ### Homepage
 ![Homepage](./public/Prototype/Homepage.JPG)
@@ -39,3 +40,6 @@
 - 헤더의 N은 마지막 아이템 id+1
 - placeholder로 예시 문구 지정
 - '저장하기' 클릭시, 입력 내용 저장 및 홈페이지에 새로운 아이템 추가
+- 데이터 저장 : `localStorage`, 서버리스(cloudeflare, firebase 등) 사용  
+→ `localStorage`로 먼저 구현  
+→ 추후 서버리스로 변경
