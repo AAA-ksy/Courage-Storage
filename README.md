@@ -9,7 +9,7 @@
 ## 설계
 ### 목표
 - `react`와 `typescript` 사용에 익숙해지기
-- 설계에 맞게 프로젝트 완성
+- 설계에 맞게 프로젝트 **완성**
 
 ### 기술스택
 | 구분 | 사용 |
@@ -58,4 +58,4 @@
    - 추후 서버리스(cloudeflare, firebase 등) 사용
 
 ## 개발일지
-- [개발일지1]()
+- [개발일지1](https://yeon-blog.vercel.app/blog/Self-Project1)
