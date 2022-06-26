@@ -15,10 +15,9 @@ export default function Welcome() {
         <p className="pt-16 text-2xl leading-10 font-welcomeContent">
             "자신감 저장소"에 입장하기 전에, 이름을 입력해주세요!
         </p>
-        <input id="name" type="text" placeholder="이름을 입력해주세요" className="input" 
-        class="font-welcomeContent text-2xl leading-10 mt-5 pl-3 rounded-lg focus:border-transparent focus:ring-yellow-200 focus:ring-4 border border-slate-500  " required/>
+        <input id="name" type="text" placeholder="이름을 입력해주세요" className="pl-3 mt-5 text-2xl leading-10 border rounded-lg input font-welcomeContent focus:border-transparent focus:ring-yellow-200 focus:ring-4 border-slate-500 " required/>
         <div className="pt-10">
-          <a herf="#" className="text-2xl font-welcomeContent hover:underline hover:text-[1.6rem] ">입장하기</a>
+          <a href="#" className="text-2xl font-welcomeContent hover:underline hover:text-[1.6rem] ">입장하기</a>
         </div>
       </div>
       <div className="w-full h-20 bg-cusBrown" />

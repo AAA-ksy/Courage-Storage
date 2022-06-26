@@ -5,9 +5,9 @@ import Welcome from './Welcome';
 function App() {
   return (
     <BrowserRouter>
-    <div className="App h-full">
+    <div className="h-full App">
       <Routes>
-          <Route exact path="/" element={<Welcome/>} />
+          <Route path="/" element={<Welcome/>} />
       </Routes>
     </div>
     </BrowserRouter>
