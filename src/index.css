@@ -13,6 +13,40 @@ html, body{
   height:100%;
 }
 
+.label-style{
+    font-size:20px;
+    font-family: 'SUIT-Medium';
+    min-width: 100px;
+}
+
+.input-style{
+  flex: 1;
+  margin-bottom:10px;
+  width:80%;
+  font-family: 'SUIT-Medium';  
+  font-size:17px;
+  outline:none;
+  border:2px solid grey;
+  border-radius:5px;
+  padding:5px 5px;
+  margin-left:20px;
+}
+
+.input-style::placeholder{
+  font-family: 'SUIT-Medium';
+  font-size:17px;
+  font-style:italic;
+}
+
+.label-input{
+ display: flex;
+ flex-direction: row nowrap;
+ justify-content: start;
+ align-items: center;
+ padding-top: 20px;
+ width:100%;
+}
+
 /* Welcome Title Font*/
 @font-face {
   font-family: 'MaplestoryOTFBold';
@@ -25,6 +59,38 @@ html, body{
 @font-face {
   font-family: 'KyoboHand';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* AddItem '+' Font*/
+@font-face {
+  font-family: 'SLEIGothicTTF';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SLEIGothicTTF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Item Header Font1 */
+@font-face {
+  font-family: 'LeferiPoint-BlackA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Item Header Font2 */
+@font-face {
+  font-family: 'SUIT-Medium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Item Content Font */
+@font-face {
+  font-family: 'MYArirang_gothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/MYArirang_gothic.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }

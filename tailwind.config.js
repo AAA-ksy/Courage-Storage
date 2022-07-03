@@ -8,12 +8,17 @@ module.exports = {
       colors:{
         'cusYellow' : '#fcefb4',
         'cusBrown' : '#ffcb69',
-        'cusYelloTitle' : '#e85d04'
+        'cusYellowTitle' : '#e85d04',
+        'cusHeaderBorder' : '#fae1dd'
       }
     },
     fontFamily: {
       'welcomeTitle' : ["MaplestoryOTFBold", "normal"],
-      'welcomeContent' : ["KyoboHand", "normal"]
+      'welcomeContent' : ["KyoboHand", "normal"],
+      'addItem':["SLEIGothicTTF", "normal"],
+      //'itemContent2' : ["MYArirang_gothic", "normal"],
+      'itemHeader' : ["LeferiPoint-BlackA", "normal"],
+      'itemContent' : ["SUIT-Medium", "normal"]
     }
   },
   plugins: [],
