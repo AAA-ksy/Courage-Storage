@@ -60,4 +60,5 @@
 
 ## 개발일지
 - [개발일지1](https://yeon-blog.vercel.app/blog/Self-Project1)
-- [개발일지1](https://yeon-blog.vercel.app/blog/Self-Project(2))
+- [개발일지2](https://yeon-blog.vercel.app/blog/Self-Project)
+- [개발일지3](https://yeon-blog.vercel.app/blog/Self-Project(3))
