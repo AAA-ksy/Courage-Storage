@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import SingleItem from "./SingleItem";
 import './index.css';
 
+export interface IProps{
+    id: number, 
+    data: object;
+}
+
 export default function ItemList() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -11,17 +16,21 @@ export default function ItemList() {
     const [comment, setComment] = useState("");
     const [feeling, setFeeling] = useState("");
 
+    const [arrValue, setArrValue]=useState<IProps>( {id:0, data:{}} );  //localStorage 데이터를 저장할 state
+
     //localStorage 데이터 불러오기
     const items = Object.keys(window.localStorage); //localStorage의 key 목록 조회
     for(const item of items){   //key에 해당하는 value 찾기
-        const value = localStorage.getItem(item);   //value : string
+        const value = localStorage.getItem(item);   //typeof(value) : string
             if(!value){                             // value의 null 예외처리
                 throw new Error('No saved value');
             }
-        const objValue = JSON.parse(value);         //value값을 객체로 변환
+
+        let tmpIdFromStorage:number = JSON.parse(value).id;    //typeof(JSON.parse(value).id) : number
+        let tmpData:object = JSON.parse(value).data;       //typeof(JSON.parse(value).data) : object
+
+        setArrValue({...arrValue, id: tmpIdFromStorage, data: tmpData});     //arrValue state에 localStorage 데이터 하나씩 추가    
     }
-    // const list = items.map((item) => { <div key={item.id} className="h-1/6 w-60 m-5 flex-col justify-center flex rounded-[45px] bg-[#d8e2dc] 
-    // hover:scale-105 cursor-pointer" onClick={handleModalOpen}>?</div> });
 
     const handleModalOpen = () => {
         setIsModalOpen(!isModalOpen);
@@ -33,10 +42,11 @@ export default function ItemList() {
         e.preventDefault();
 
         //item번호 지정
-        var tmpid = localStorage.length+1;
+        var tmpIdToStorage = localStorage.length+1;
+
         //localStorage에 저장할 데이터 구조
         const objData = {
-            id : tmpid,
+            id : tmpIdToStorage,
             data : {
                 objWhen: when,
                 objWho : who,
@@ -47,7 +57,7 @@ export default function ItemList() {
         };
 
         //localStorage에 JSON 형식으로 저장
-        localStorage.setItem(tmpid.toString(),JSON.stringify(objData));
+        localStorage.setItem(tmpIdToStorage.toString(),JSON.stringify(objData));
 
         //input 입력값 초기화
         setWhen("");
@@ -57,7 +67,6 @@ export default function ItemList() {
         setFeeling("");
 
         //모달창 닫기
-        //handleModalOpen();
         setIsModalOpen(!isModalOpen);
         console.log("isModalOpen in handleSubmit : "+isModalOpen);
     
@@ -65,6 +74,10 @@ export default function ItemList() {
 
     return (
         <div className="flex flex-row flex-wrap h-full border-t-2 border-t-cusHeaderBorder">
+            {/* {{ ...arrValue.map((value) => (
+                    <SingleItem id={value.id} data={value.data} />
+                ))
+            }} */}
             <div className="h-1/6 w-60 m-5 flex-col justify-center flex rounded-[45px] bg-[#d8e2dc] 
             hover:scale-105 cursor-pointer" onClick={handleModalOpen}>
                 <span className="text-4xl text-white font-addItem ">+</span>
@@ -111,7 +124,6 @@ export default function ItemList() {
                     </div>
                 </form>
             </div>
-            <SingleItem />
         </div>
     );
   }
